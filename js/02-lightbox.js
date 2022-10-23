@@ -18,16 +18,16 @@ galleryRef.insertAdjacentHTML("beforeend", cardsGallery);
 
 galleryRef.addEventListener("click", onGalleryRefClik);
 
-function onGalleryRefClik(event) {
-  event.preventDefault();
-  if (event.target.nodeName !== "IMG") {
-    return;
-  }
-}
-
 const lightbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionDelay: 250,
 });
 
 lightbox.open();
+
+function onGalleryRefClik(event) {
+  event.preventDefault();
+  if (event.target.nodeName !== "IMG") {
+    return;
+  }
+}
